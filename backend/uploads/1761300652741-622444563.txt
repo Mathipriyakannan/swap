@@ -1,0 +1,116 @@
+1.Write a program to sum all the items in a list;
+
+def sum_list(items):
+    
+    sum_numbers = 0
+    
+    for x in items:
+        
+        sum_numbers += x
+    
+    return sum_numbers
+
+
+print(sum_list([1, 2, -8]))
+
+output:-5
+
+2.Write a program to multiply all the items in a list;
+
+def multiply_list_items(list1):
+    result = 1
+    for x in list1:
+        result = result * x
+    return result
+
+list1 = [1, 2, 3]
+print(multiply_list_items(list1))  
+
+list2 = [2, 4, 10]
+print(multiply_list_items(list2))  
+
+output:list1 =6
+output: list2 =80
+
+3.write a program to get the largest number from a list;
+
+def get_largest_number(numbers):
+ 
+  if not numbers:
+    return None
+
+  largest = numbers[0]
+  for number in numbers:
+    if number > largest:
+      largest = number
+  return largest
+
+
+numbers = [10, 5, 20, 8, 15]
+largest_number = get_largest_number(numbers)
+
+print(f"The largest number is: {largest_number}")
+
+output:20.
+
+4.write a program to get the smallest number from a list;
+def find_smallest_number(numbers):
+ 
+  if not numbers:
+    return None
+  smallest = numbers[0]
+  for number in numbers:
+    if number < smallest:
+      smallest = number
+  return smallest
+
+
+numbers = [5, 2, 8, 1, 7]
+smallest_number = find_smallest_number(numbers)
+print(f"The smallest number is: {smallest_number}")
+
+output:1
+
+5.write a program to get remove duplicate from a list:
+
+def remove_duplicates(input_list):
+    seen = set()
+    result = []
+    for item in input_list:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result
+
+my_list = [1, 2, 2, 3, 4, 4, 4, 5]
+new_list = remove_duplicates(my_list)
+print(new_list) # Output: [1, 2, 3, 4, 5]
+
+output:1,2,3,4,5
+
+6.write a program to check if a list is empty or not;
+
+def is_list_empty(list_):
+ 
+    if not list_:
+        return True
+    else:
+        return False
+
+
+my_list = []
+if is_list_empty(my_list):
+    print("The list is empty")
+else:
+    print("The list is not empty")
+
+my_list = [1, 2, 3]
+if is_list_empty(my_list):
+    print("The list is empty")
+else:
+    print("The list is not empty")
+output:
+The list is empty
+The list is not empty
+
+
