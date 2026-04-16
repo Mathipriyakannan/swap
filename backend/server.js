@@ -24,6 +24,14 @@ app.use('/api/messages', messageRoutes);
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// Existing routes ellam keezhey irukatum...
+
+// React build serve pannanum - LAST la add pannu
+app.use(express.static(path.join(__dirname, '../build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build', 'index.html'));
+});
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'uploads/');
